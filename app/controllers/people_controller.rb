@@ -10,6 +10,10 @@ class PeopleController < ApplicationController
   # GET /people/1
   # GET /people/1.json
   def show
+
+    @mother = Person.find(@person.parent_mother_id) rescue nil
+    @father = Person.find(@person.parent_father_id) rescue nil
+
   end
 
   # GET /people/new

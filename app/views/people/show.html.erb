@@ -4,7 +4,12 @@
 
 <p>
   <strong>First name:</strong>
-  <%= @person.first_name %>
+<% if @person.first_name.blank? %>
+      Not Available
+<% else %>
+  <%=@person.first_name %>
+<% end %>
+
 </p>
 
 <p>
@@ -41,6 +46,9 @@
   <strong>Pob:</strong>
   <%= @person.pob %>
 </p>
+
+<h3>Mother: <%=@mother && @mother.first_name%></h3>
+<h3>Father: <%=@father && @father.first_name%></h3>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>
