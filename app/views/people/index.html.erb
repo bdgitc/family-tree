@@ -25,13 +25,13 @@
           <tr>
             <td><%= person.id %></td>
             <td><%= person.first_name.blank? ? raw("<span class=\"no-value\" title=\"This has no value\">N/A</span>") : person.first_name %></td>
-            <td><%= person.middle_name %></td>
-            <td><%= person.last_name %></td>
-            <td><%= person.parent_mother_id %></td>
-            <td><%= person.parent_father_id %></td>
-            <td><%= person.description %></td>
-            <td><%= person.dob %></td>
-            <td><%= person.pob %></td>
+            <td><%= person.middle_name.blank? ? raw ("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.middle_name %></td>
+            <td><%= person.last_name.blank? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.last_name %></td>
+            <td><%= person.parent_mother_id? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.parent_mother_id %></td>
+            <td><%= person.parent_father_id? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.parent_mother_id %></td>
+            <td><%= person.description? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.description %></td>
+            <td><%= person.dob? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.dob %></td>
+            <td><%= person.pob? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.pob %></td>
             <td><%= link_to 'Show', person %></td>
             <td><%= link_to 'Edit', edit_person_path(person) %></td>
             <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
