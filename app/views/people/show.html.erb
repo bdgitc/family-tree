@@ -45,7 +45,7 @@
 
 <p>
   <strong>Dob:</strong>
-  <%= @person.dob %>
+  <%= @person.dob %> (Current Age: <%=@current_age%>)
 </p>
 
 <p>
@@ -55,6 +55,7 @@
 
 <h3>Mother: <%=@mother && @mother.first_name%></h3>
 <h3>Father: <%=@father && @father.first_name%></h3>
+<h3>Spouse: <%=@father && @spouse.first_name%></h3>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>

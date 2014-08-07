@@ -32,8 +32,8 @@
     <%= f.number_field :parent_father_id %>
   </div>
   <div class="field">
-        <%= f.label :marriage %><br>
-        <%= f.text_field :marriage %>
+    <%= f.label :marriage %><br>
+    <%= f.text_field :marriage %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
@@ -41,7 +41,7 @@
   </div>
   <div class="field">
     <%= f.label :dob %><br>
-    <%= f.date_select :dob %>
+    <%= f.date_select :dob, { :start_year => 1900 } %>
   </div>
   <div class="field">
     <%= f.label :pob %><br>

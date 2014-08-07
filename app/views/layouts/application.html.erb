@@ -3,7 +3,12 @@
 <head>
   <title>FamilyTree</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <% #javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Explictly listing JS due to gem bug on Win 8 we don't have time to fix yet -->
+  <script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
+  <script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
+  <script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
+  <script data-turbolinks-track="true" src="/assets/people.js?body=1"></script>
+  <script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
