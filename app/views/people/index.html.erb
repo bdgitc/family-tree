@@ -13,7 +13,7 @@
           <th>Last name</th>
           <th>Parent mother</th>
           <th>Parent father</th>
-          <th></th>
+          <th>Marriage</th>
           <th>Description</th>
           <th>Dob</th>
           <th>Pob</th>
@@ -30,7 +30,7 @@
             <td><%= person.last_name.blank? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.last_name %></td>
             <td><%= person.parent_mother_id.blank? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.parent_mother_id %></td>
             <td><%= person.parent_father_id.blank? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.parent_mother_id %></td>
-            <td><%= person.marriage.blank? ? raw("<span class=\no-value\"title=\"This has no value\">"N/A</span>") : person.marriage %></td>
+            <td><%= person.marriage.blank? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>")  : person.marriage %></td>
             <td><%= person.description.blank? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.description %></td>
             <td><%= person.dob.blank? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.dob %></td>
             <td><%= person.pob.blank? ? raw("<span class=\"no-value\"title=\"This has no value\">N/A</span>") : person.pob %></td>
