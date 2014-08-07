@@ -11,9 +11,12 @@ class PeopleController < ApplicationController
   # GET /people/1.json
   def show
 
+    @tree = @person.get_tree
+
     @mother = Person.find(@person.parent_mother_id) rescue nil
     @father = Person.find(@person.parent_father_id) rescue nil
     @spouse = Person.find(@person.marriage) rescue nil
+
     month_diff = Date.current.month - @person.dob.month
     date_diff = Date.current.day - @person.dob.day
     @current_age = (Date.current.year - @person.dob.year) + (month_diff < 0 || (month_diff == 0 && date_diff < 0) ? -1 : 0)
